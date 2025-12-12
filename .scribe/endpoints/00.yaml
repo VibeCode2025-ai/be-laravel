@@ -1,0 +1,253 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/sanpham
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"masp":11,"tensp":"MacBook Air M2 2022","anhdaidien":"Air-M2.jpg","chuyenmuc":"CM1","mota":"Lo\u1ea1i card \u0111\u1ed3 h\u1ecda : 8 nh\u00e2n GPU, 16 nh\u00e2n Neural Engine. |   \r\nDung l\u01b0\u1ee3ng RAM : 8GB.|\r\n\u1ed4 c\u1ee9ng : 256GB. |\r\nH\u1ec7 \u0111i\u1ec1u h\u00e0nh : MacOS. |\r\nLo\u1ea1i CPU : Apple M2. |\r\nTr\u1ecdng l\u01b0\u1ee3ng : 1.27 kg. |\r\nK\u00edch th\u01b0\u1edbc m\u00e0n h\u00ecnh : 13.6 inches.","hinhanhkhac1":"Air-M2.jpg","giamoi":"22.290.000","giacu":"29.990.000","trangthai":1},{"masp":5,"tensp":"GIGABYTE G5 KF5-53VN353SH","anhdaidien":"gigabyte-g5.jpg","chuyenmuc":"CM4","mota":"","hinhanhkhac1":"gigabyte-g5.jpg","giamoi":"25.400.000","giacu":"27.990.000","trangthai":1},{"masp":6,"tensp":"Dell Gaming G15 5515","anhdaidien":"dell-g15.jpg","chuyenmuc":"CM1","mota":"Lo\u1ea1i card \u0111\u1ed3 h\u1ecda : NVIDIA\u00ae GeForce RTX\u2122 3050 4GB GDDR6 + AMD Radeon Graphics. |\r\nLo\u1ea1i CPU : AMD Ryzen 7 5800H. |\r\nDung l\u01b0\u1ee3ng RAM : 8GB. |\r\n\u1ed4 c\u1ee9ng : 256GB. |\r\nTr\u1ecdng l\u01b0\u1ee3ng : 2.57 kg. |\r\nH\u1ec7 \u0111i\u1ec1u h\u00e0nh : Windows. |\r\nK\u00edch th\u01b0\u1edbc m\u00e0n h\u00ecnh : 15.6 inches.","hinhanhkhac1":"dell-g15.jpg","giamoi":"18.990.000","giacu":"20.990.000","trangthai":1},{"masp":7,"tensp":"Acer Nitro V ANV15","anhdaidien":"nitro-v.jpg","chuyenmuc":"CM1","mota":"Lo\u1ea1i card \u0111\u1ed3 h\u1ecda : NVIDIA GeForce RTX 4050 6GB GDDR6 VRAM. |\r\nLo\u1ea1i CPU : Intel Core i7-13700H. |\r\nRAM : 16GB. |\r\n\u1ed4 c\u1ee9ng : 512GB. |\r\nK\u00edch th\u01b0\u1edbc m\u00e0n h\u00ecnh : 15.6 inches.|\r\nH\u1ec7 \u0111i\u1ec1u h\u00e0nh : Windows. |\r\nTr\u1ecdng l\u01b0\u1ee3ng : 2.1 kg.","hinhanhkhac1":"nitro-v.jpg","giamoi":"27.390.000","giacu":"30.990.000","trangthai":1},{"masp":8,"tensp":"HP VICTUS 16-d0294TX","anhdaidien":"HP-VICTUS-16.jpg","chuyenmuc":"CM1","mota":"Lo\u1ea1i card \u0111\u1ed3 h\u1ecda : NVIDIA GeForce RTX 3050 4GB GDDR6. |\nDung l\u01b0\u1ee3ng RAM : 8GB. |\n\u1ed4 c\u1ee9ng : 512GB. |\nLo\u1ea1i CPU : Intel Core i7-12700H. |\nH\u1ec7 \u0111i\u1ec1u h\u00e0nh : Windows. |\nTr\u1ecdng l\u01b0\u1ee3ng : 2.46 kg. |\nK\u00edch th\u01b0\u1edbc m\u00e0n h\u00ecnh : 16.1 inches.\n","hinhanhkhac1":"HP-VICTUS-16.jpg","giamoi":"21.990.000","giacu":"28.990.000","trangthai":1},{"masp":9,"tensp":"MSI Stealth 17 GS77","anhdaidien":"MSI-Stealth-17.jpg","chuyenmuc":"CM1","mota":"Intel Core i7-13700HX","hinhanhkhac1":"MSI-Stealth-17.jpg","giamoi":"56.690.000","giacu":"59.490.000","trangthai":1},{"masp":10,"tensp":"Acer Predator Triton 500","anhdaidien":"Acer-Predator-Triton.jpg","chuyenmuc":"CM4","mota":"Intel Core i7-13700HX","hinhanhkhac1":"Acer-Predator-Triton.jpg","giamoi":"54.970.000","giacu":"56.780.000","trangthai":1},{"masp":4,"tensp":"HP 15-DW3033DX 405F6UA","anhdaidien":"hp15s.jpg","chuyenmuc":"CM3","mota":"Intel Core i5-1135G7.","hinhanhkhac1":"hp15s.jpg","giamoi":"8.990.000","giacu":"11.400.000","trangthai":1},{"masp":3,"tensp":"HP 14-EP0112TU","anhdaidien":"hp14s.jpg","chuyenmuc":"CM2","mota":"Intel Core i5-1135G7.","hinhanhkhac1":"hp14s.jpg","giamoi":"16.990.000","giacu":"19.590.000","trangthai":1},{"masp":1,"tensp":" Asus ROG Strix Scar 18","anhdaidien":"rog-scar.jpg","chuyenmuc":"CM2","mota":"AMD Ryzen 9 7945HX","hinhanhkhac1":"rog-scar.jpg","giamoi":"35.990.000","giacu":"39.500.000","trangthai":1},{"masp":2,"tensp":"Asus TUF Gaming FX507ZC4","anhdaidien":"TUFGM2.jpg","chuyenmuc":"CM3","mota":"","hinhanhkhac1":"TUFGM2.jpg","giamoi":"19.290.000","giacu":"25.590.000","trangthai":1}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/sanpham/{sanpham_masp}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      sanpham_masp:
+        name: sanpham_masp
+        description: ''
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      sanpham_masp: 11
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"masp":11,"tensp":"MacBook Air M2 2022","anhdaidien":"Air-M2.jpg","chuyenmuc":"CM1","mota":"Lo\u1ea1i card \u0111\u1ed3 h\u1ecda : 8 nh\u00e2n GPU, 16 nh\u00e2n Neural Engine. |   \r\nDung l\u01b0\u1ee3ng RAM : 8GB.|\r\n\u1ed4 c\u1ee9ng : 256GB. |\r\nH\u1ec7 \u0111i\u1ec1u h\u00e0nh : MacOS. |\r\nLo\u1ea1i CPU : Apple M2. |\r\nTr\u1ecdng l\u01b0\u1ee3ng : 1.27 kg. |\r\nK\u00edch th\u01b0\u1edbc m\u00e0n h\u00ecnh : 13.6 inches.","hinhanhkhac1":"Air-M2.jpg","giamoi":"22.290.000","giacu":"29.990.000","trangthai":1}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 3 characters.'
+        required: true
+        example: '[2UZ5ij-e/dl4'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      fullname:
+        name: fullname
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: carolyne.luettgen@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      username: consequatur
+      password: '[2UZ5ij-e/dl4'
+      fullname: consequatur
+      email: carolyne.luettgen@example.org
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      username: consequatur
+      password: consequatur
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
