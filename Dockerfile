@@ -13,7 +13,6 @@
 # CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=10000
 FROM php:8.2-fpm
 
-# Install system dependencies
 RUN apt-get update && apt-get install -y \
     zip unzip curl git \
     libpng-dev libonig-dev libxml2-dev \
@@ -21,30 +20,25 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /var/www/html
 
-# Copy project
 COPY . .
 
-# Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --install-dir=/usr/local/bin --filename=composer
 
-# Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Fix permissions
+# Quyền thư mục
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
-# Create storage link
+# Chỉ tạo storage link (KHÔNG ĐỤNG DB)
 RUN php artisan storage:link
 
-# Clear cache
-RUN php artisan config:clear \
-    && php artisan cache:clear \
-    && php artisan optimize:clear
-
-# Expose port
 EXPOSE 10000
 
-# Start Laravel
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=10000
+# 👉 CHỈ CHẠY NHỮNG THỨ CẦN DB KHI CONTAINER START
+CMD php artisan migrate --force || true && \
+    php artisan config:clear && \
+    php artisan cache:clear && \
+    php artisan optimize:clear && \
+    php artisan serve --host=0.0.0.0 --port=10000
