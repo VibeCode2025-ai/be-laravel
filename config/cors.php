@@ -2,7 +2,7 @@
 return [
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
     'allowed_methods' => ['*'],
-    'allowed_origins' => ['https://btlaptop.vercel.app'], // CHỈ 1 DOMAIN
+    'allowed_origins' => ['https://btlaptops.vercel.app'], // CHỈ 1 DOMAIN
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
