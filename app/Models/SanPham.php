@@ -16,7 +16,7 @@ class SanPham extends Model
 
     protected $fillable = [
         'tensp', 'anhdaidien', 'chuyenmuc_id', 'mota','hang_id','danhmuc_id',
-        'hinhanhkhac1', 'giamoi', 'giacu', 'trangthai'
+        'hinhanhkhac1', 'thongso','giamoi', 'giacu', 'trangthai'
     ];
     public function hang()
     { 
