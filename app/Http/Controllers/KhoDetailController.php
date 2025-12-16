@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KhoDetail;
 use App\Models\Kho;
+use App\Models\KhoDetail;
 use Illuminate\Http\Request;
 
 class KhoDetailController extends Controller
@@ -20,6 +20,7 @@ class KhoDetailController extends Controller
     public function show($id)
     {
         $row = KhoDetail::with(['sanpham', 'nhacungcap'])->findOrFail($id);
+
         return response()->json($row);
     }
 
@@ -31,7 +32,6 @@ class KhoDetailController extends Controller
             'soluong_nhap' => 'required|integer|min:1',
             'gia_mua' => 'nullable|numeric|min:0',
             'ngay_san_xuat' => 'nullable|date',
-            'han_su_dung' => 'nullable|date',
             'ngay_bao_hanh' => 'nullable|date',
             'han_bao_hanh' => 'nullable|date',
             'ghi_chu' => 'nullable|string',
@@ -54,13 +54,13 @@ class KhoDetailController extends Controller
         );
 
         $kho->soluong_nhap += $validated['soluong_nhap'];
-        $kho->soluong_ton  += $validated['soluong_nhap'];
+        $kho->soluong_ton += $validated['soluong_nhap'];
         $kho->save();
 
         // 3️⃣ Trả về kết quả
         return response()->json([
             'lot' => $lot->fresh(['sanpham', 'nhacungcap']),
-            'kho_tong' => $kho
+            'kho_tong' => $kho,
         ], 201);
     }
 
@@ -86,7 +86,7 @@ class KhoDetailController extends Controller
             );
 
             $kho->soluong_nhap += $diff;
-            $kho->soluong_ton  += $diff;
+            $kho->soluong_ton += $diff;
             $kho->save();
         }
 
@@ -105,7 +105,7 @@ class KhoDetailController extends Controller
         );
 
         $kho->soluong_nhap -= $row->soluong_nhap;
-        $kho->soluong_ton  -= $row->soluong_nhap;
+        $kho->soluong_ton -= $row->soluong_nhap;
         $kho->save();
 
         $row->delete();
