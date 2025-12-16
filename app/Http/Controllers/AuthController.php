@@ -15,7 +15,7 @@ class AuthController extends Controller
             'password' => 'required|min:6',
             'fullname' => 'required',
             'email' => 'required|email|unique:taikhoan',
-            'sdt' => 'required|int|digits:10',
+            'sdt' => 'required|digits:10',
             'diachi' => 'required',
         ]);
 
@@ -79,7 +79,7 @@ class AuthController extends Controller
         // Chỉ validate các trường người dùng được phép chỉnh sửa
         $request->validate([
             'fullname' => 'nullable|string|max:255',
-            'sdt' => 'nullable|string|max:10',
+            'sdt' => 'nullable|max:20',
             'diachi' => 'nullable|string|max:255',
             'email' => 'nullable|email|unique:taikhoan,email,'.$user->username.',username',
         ]);
