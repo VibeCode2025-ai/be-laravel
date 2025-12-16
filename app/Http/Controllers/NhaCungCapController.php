@@ -23,9 +23,9 @@ class NhaCungCapController extends Controller
     {
         $validated = $request->validate([
             'ten' => 'required|string|max:255',
-            'email' => 'nullable|email|max:255',
-            'sdt' => 'nullable|string|max:20',
-            'dia_chi' => 'nullable|string|max:255',
+            'email' => 'required|email|max:255',
+            'sdt' => 'required|string|max:20',
+            'dia_chi' => 'required|string|max:255',
             'ghi_chu' => 'nullable|string|max:500',
         ]);
 
@@ -64,9 +64,9 @@ class NhaCungCapController extends Controller
 
         $validated = $request->validate([
             'ten' => 'required|string|max:255',
-            'email' => 'nullable|email|max:255',
-            'sdt' => 'nullable|string|max:20',
-            'dia_chi' => 'nullable|string|max:255',
+            'email' => 'required|email|max:255',
+            'sdt' => 'required|string|max:20',
+            'dia_chi' => 'required|string|max:255',
             'ghi_chu' => 'nullable|string|max:500',
         ]);
 
