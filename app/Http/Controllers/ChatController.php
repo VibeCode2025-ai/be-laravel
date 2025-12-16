@@ -21,9 +21,8 @@ class ChatController extends Controller
         $isAdmin = $authUser && $authUser->loaiTK == 1;
 
         if ($isAdmin) {
-            // Admin gửi tin CHO khách
-            $userId = $request->target_user_id; // ID của khách
-            $userName = 'Hỗ trợ'; // Không cần tên khách
+            $userId = $request->target_user_id; 
+            $userName = 'Hỗ trợ'; 
         } else {
             // Khách gửi tin
             if ($authUser) {
@@ -65,9 +64,7 @@ class ChatController extends Controller
         ]);
     }
 
-    /**
-     * Lấy toàn bộ tin nhắn theo user_id
-     */
+
     public function getMessages($userId)
     {
         $messages = Message::where('user_id', $userId)
@@ -93,21 +90,18 @@ class ChatController extends Controller
         }));
     }
 
-    /**
-     * Danh sách người dùng có tin nhắn + tin cuối + TÊN
-     */
+ 
     public function getChatUsers()
     {
-        // Chỉ lấy những user_id KHÔNG phải admin
         return Message::selectRaw('user_id, MAX(created_at) as max_created_at')
-            ->where('is_admin', 0) // LOẠI BỎ TIN NHẮN ADMIN
+            ->where('is_admin', 0)
             ->groupBy('user_id')
             ->orderByDesc('max_created_at')
             ->get()
             ->map(function ($row) {
                 $user = TaiKhoan::find($row->user_id);
                 $last = Message::where('user_id', $row->user_id)
-                    ->where('is_admin', 0) // Chỉ lấy tin cuối của khách
+                    ->where('is_admin', 0) 
                     ->orderBy('created_at', 'desc')
                     ->first();
 
